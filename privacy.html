@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SiteMarkup Privacy &amp; Terms</title>
+<style>
+  /* Layout: one reading column, a site-document header with a two-tab switch (Privacy / Terms). */
+  :root {
+    --bg: #f6f6f4;
+    --paper: #ffffff;
+    --ink: #17181a;
+    --muted: #5d6066;
+    --rule: #dcdcd8;
+    --accent: #17181a;
+    --accent-ink: #ffffff;
+    --font-body: -apple-system, "SF Pro Text", "Helvetica Neue", sans-serif;
+    --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121315; --paper: #1b1c1f; --ink: #ecedee; --muted: #a2a5ab;
+      --rule: #2e3034; --accent: #ecedee; --accent-ink: #121315; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121315; --paper: #1b1c1f; --ink: #ecedee; --muted: #a2a5ab;
+    --rule: #2e3034; --accent: #ecedee; --accent-ink: #121315; color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    -webkit-text-size-adjust: 100%;
+    background: var(--bg); color: var(--ink);
+    font-family: var(--font-body); font-size: 16px; line-height: 1.65;
+    padding-inline: 16px; padding-block: 0 48px;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+
+  header { padding-block: 40px 20px; display: grid; gap: 14px; }
+  .mark {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+  }
+  .mark b {
+    display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 7px;
+    background: var(--accent); color: var(--accent-ink); font-size: 10px; letter-spacing: 0; line-height: 1;
+  }
+  h1 { font-size: clamp(28px, 6vw, 36px); line-height: 1.15; margin: 0; font-weight: 600; text-wrap: balance; }
+  .meta { color: var(--muted); font-size: 14px; margin: 0; }
+
+  nav.tabs {
+    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 2;
+    background: var(--bg); padding-block: 10px; border-bottom: 1px solid var(--rule);
+    display: flex; gap: 6px;
+  }
+  .tab {
+    font: 500 15px/1 var(--font-body); color: var(--ink);
+    padding: 10px 16px; border-radius: 999px; border: 1px solid var(--rule);
+    background: transparent; cursor: pointer; text-decoration: none;
+  }
+  .tab[aria-selected="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .tab:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+  article {
+    background: var(--paper); border: 1px solid var(--rule); border-radius: 14px;
+    padding: clamp(20px, 5vw, 40px); margin-top: 24px;
+  }
+  article > h2:first-child { margin-top: 0; }
+  h2 { font-size: 22px; line-height: 1.25; margin: 36px 0 8px; font-weight: 600; text-wrap: balance; }
+  h3 { font-size: 16px; margin: 28px 0 6px; font-weight: 600; }
+  p, li { max-width: 65ch; }
+  ul { padding-left: 1.2em; display: grid; gap: 6px; }
+  .lede { font-size: 17px; color: var(--muted); }
+  .num { font-family: var(--font-mono); font-size: 13px; color: var(--muted); margin-right: 8px; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  .table-scroll { overflow-x: auto; margin-block: 12px; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--rule); }
+  th { font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+  td:first-child { white-space: nowrap; font-weight: 500; }
+
+  .contact {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+    border: 1px solid var(--rule); border-radius: 10px; padding: 12px 14px; margin-top: 10px;
+  }
+  .contact code { font-family: var(--font-mono); font-size: 15px; user-select: all; }
+  .copy {
+    font: 500 13px/1 var(--font-body); padding: 8px 12px; border-radius: 8px; cursor: pointer;
+    border: 1px solid var(--rule); background: var(--bg); color: var(--ink);
+  }
+  footer { color: var(--muted); font-size: 13px; margin-top: 28px; text-align: center; }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <header>
+    <span class="mark"><b>SM</b> SiteMarkup</span>
+    <h1>Privacy &amp; Terms</h1>
+    <p class="meta">For the SiteMarkup app on iPhone and iPad · Last updated 5 October 2026</p>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Document">
+    <button class="tab" role="tab" id="tab-privacy" aria-controls="privacy" aria-selected="true">Privacy Policy</button>
+    <button class="tab" role="tab" id="tab-terms" aria-controls="terms" aria-selected="false">Terms of Use</button>
+  </nav>
+
+  <article id="privacy" role="tabpanel" aria-labelledby="tab-privacy">
+    <h2>Privacy Policy</h2>
+    <p class="lede">SiteMarkup is an iPhone and iPad app for recording site photos, measurements and markups, used by businesses and their teams. This policy explains what the app handles, where it is kept and how to reach us. We handle personal information in line with the Australian Privacy Principles in the Privacy Act 1988 (Cth).</p>
+
+    <h3><span class="num">1</span>Who we are</h3>
+    <p>SiteMarkup is provided by the SiteMarkup team in New South Wales, Australia ("we", "us"). Contact us at the email at the end of this policy.</p>
+
+    <h3><span class="num">2</span>The short version</h3>
+    <ul>
+      <li>Your projects are kept on your device and in the cloud storage <strong>your company chooses</strong> (Dropbox, iCloud Drive, Google Drive or OneDrive), under your company's own account.</li>
+      <li>We don't run servers that receive your projects, and we can't see them.</li>
+      <li>No ads, no analytics or tracking tools, and we never sell or rent information.</li>
+    </ul>
+
+    <h3><span class="num">3</span>What the app handles</h3>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Information</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Your name and email</td><td>From Sign in with Apple or Google, to identify you in the app, show who created each project, and give you a seat on your company's plan.</td></tr>
+          <tr><td>Company name and logo</td><td>Entered by your company, shown in the app on every team member's device.</td></tr>
+          <tr><td>Project details</td><td>Client names and site addresses you enter, to file each job.</td></tr>
+          <tr><td>Photos, videos, PDFs</td><td>What you capture or import, with your marks and measurements.</td></tr>
+          <tr><td>Measurements</td><td>Lengths you type in or receive from a Bluetooth laser measurer.</td></tr>
+          <tr><td>Subscription status</td><td>Which plan your company has and who is on it. Payment is handled entirely by Apple; we never receive card or bank details.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span class="num">4</span>Device permissions</h3>
+    <p>The app asks for each permission only when you use the feature that needs it. You can change any of them in Settings › SiteMarkup.</p>
+    <ul>
+      <li><strong>Camera</strong> to take site photos and videos.</li>
+      <li><strong>Microphone</strong> to record sound with site videos.</li>
+      <li><strong>Photos</strong> to import existing photos into a project.</li>
+      <li><strong>Location</strong>, only while the app is open, to fill in a project's site address.</li>
+      <li><strong>Calendar</strong>, read only and only if you turn it on, to suggest a site address from a nearby appointment. Calendar entries are never uploaded or stored.</li>
+      <li><strong>Bluetooth</strong> to receive readings from a laser measurer.</li>
+    </ul>
+
+    <h3><span class="num">5</span>Where it is stored</h3>
+    <ul>
+      <li><strong>On your device</strong>, in the app's own storage. Sign-in keys are kept in the device's secure Keychain.</li>
+      <li><strong>Your company's cloud storage</strong>: projects, the company name and logo, the plan and the team list sync to the folder your company chose, so the whole team sees the same projects. Who can open that folder is controlled by your company in that service.</li>
+      <li><strong>Google Drive backup</strong>, if you turn it on: a copy of each project in your own Google Drive.</li>
+    </ul>
+    <p>Dropbox, Apple, Google and Microsoft may store data on servers outside Australia, including in the United States, under their own privacy policies. The app connects to them directly from your device.</p>
+
+    <h3><span class="num">6</span>Your company controls its projects</h3>
+    <p>The projects belong to the company whose storage they are kept in. The person who manages your company's plan can see the names and emails of the people on it, invite people and remove them. Questions about a company's project records are best directed to that company.</p>
+
+    <h3><span class="num">7</span>How long it is kept</h3>
+    <p>Projects stay in your company's storage until your company deletes them. Projects deleted in the app move to a Recently Deleted folder in that storage and are removed after the period set in the app's Settings. Uninstalling the app or using Settings › Delete Account &amp; Data removes everything the app keeps on the device.</p>
+
+    <h3><span class="num">8</span>Your choices</h3>
+    <ul>
+      <li>Sign out at any time in the app's Settings.</li>
+      <li>Delete all data on the device with Settings › Delete Account &amp; Data.</li>
+      <li>Stop using Sign in with Apple for this app in your iPhone's Settings › Apple Account › Sign in with Apple.</li>
+      <li>Ask us about any personal information we hold about you.</li>
+    </ul>
+
+    <h3><span class="num">9</span>Children</h3>
+    <p>SiteMarkup is a business tool and is not directed at children under 16.</p>
+
+    <h3><span class="num">10</span>Contact and complaints</h3>
+    <p>For questions or a privacy complaint, email us. We aim to reply within 30 days. If you're not satisfied with our answer, you can contact the Office of the Australian Information Commissioner at <a href="https://www.oaic.gov.au">oaic.gov.au</a>.</p>
+    <div class="contact"><code id="email-privacy">the support email (coming soon)</code><button class="copy" type="button" data-copy="email-privacy">Copy</button></div>
+
+    <h3><span class="num">11</span>Changes</h3>
+    <p>We may update this policy as the app changes. The date at the top shows the latest version.</p>
+  </article>
+
+  <article id="terms" role="tabpanel" aria-labelledby="tab-terms" hidden>
+    <h2>Terms of Use</h2>
+    <p class="lede">These terms apply to everyone who uses SiteMarkup. By signing in, you agree to them. They sit alongside Apple's standard <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed Application End User License Agreement</a>.</p>
+
+    <h3><span class="num">1</span>The service</h3>
+    <p>SiteMarkup lets a business and its team record site photos, measurements and markups and keep them in the business's own cloud storage.</p>
+
+    <h3><span class="num">2</span>Subscriptions and free trial</h3>
+    <ul>
+      <li>A company uses SiteMarkup on a plan for a set number of users, paid monthly or yearly through the purchaser's Apple Account.</li>
+      <li>A new plan may start with a 14-day free trial. If it isn't cancelled before the trial ends, the plan's price is charged.</li>
+      <li>Plans renew automatically unless cancelled at least 24 hours before the end of the current period. Manage or cancel in your Apple Account settings.</li>
+      <li>Moving to a bigger plan to add users takes effect straight away; Apple adjusts the charge for the rest of the period.</li>
+      <li>Payments, refunds and billing are handled by Apple under its terms.</li>
+    </ul>
+
+    <h3><span class="num">3</span>Company plans and invitations</h3>
+    <p>The person who buys a plan manages it for their company. They choose who gets a seat by inviting people's email addresses, and may remove people. Someone not invited, or beyond the plan's number of users, can't use the plan.</p>
+
+    <h3><span class="num">4</span>Using it properly</h3>
+    <ul>
+      <li>Keep your sign-in to yourself and sign out on shared devices.</li>
+      <li>Only capture photos and information you need for the job, and respect the privacy of clients and anyone on site.</li>
+      <li>You're responsible for having the right to the content you add, and for sharing your company's folder only with people who should see it.</li>
+      <li>Don't try to copy, alter or get around the app's security or its plans.</li>
+    </ul>
+
+    <h3><span class="num">5</span>Check every measurement</h3>
+    <p>Laser readings, auto-filled values and markups are aids for site work. Always confirm critical dimensions on site before ordering materials, manufacturing or installing.</p>
+
+    <h3><span class="num">6</span>Your content</h3>
+    <p>Photos, plans, markups and project records you make with SiteMarkup belong to you or your company. We claim no ownership of them and don't receive them.</p>
+
+    <h3><span class="num">7</span>Availability</h3>
+    <p>We work to keep the app reliable but can't promise it will always be available or error-free. Syncing depends on internet access and on your chosen storage service. Keep your device updated and let us know about problems.</p>
+
+    <h3><span class="num">8</span>Liability</h3>
+    <p>To the extent the law allows, we are not liable for loss caused by relying on the app without checking, by sync delays, or by services outside our control. Nothing in these terms limits any rights you have under the Australian Consumer Law.</p>
+
+    <h3><span class="num">9</span>Ending use</h3>
+    <p>You may stop using SiteMarkup at any time; cancel any plan in your Apple Account settings. We may suspend access for misuse of the app. Your projects stay in your company's storage either way.</p>
+
+    <h3><span class="num">10</span>Governing law and changes</h3>
+    <p>These terms are governed by the laws of New South Wales, Australia. We may update them; the date at the top shows the latest version.</p>
+
+    <h3><span class="num">11</span>Contact</h3>
+    <div class="contact"><code id="email-terms">the support email (coming soon)</code><button class="copy" type="button" data-copy="email-terms">Copy</button></div>
+  </article>
+
+  <footer>SiteMarkup</footer>
+</div>
+
+<script>
+  (function () {
+    var tabs = { privacy: document.getElementById("tab-privacy"), terms: document.getElementById("tab-terms") };
+    function show(name) {
+      if (!tabs[name]) name = "privacy";
+      Object.keys(tabs).forEach(function (key) {
+        var on = key === name;
+        tabs[key].setAttribute("aria-selected", on ? "true" : "false");
+        document.getElementById(key).hidden = !on;
+      });
+    }
+    tabs.privacy.addEventListener("click", function () { show("privacy"); });
+    tabs.terms.addEventListener("click", function () { show("terms"); });
+    // Links from the app open the right tab: …#privacy or …#terms
+    show((location.hash || "").replace("#", ""));
+    window.addEventListener("hashchange", function () { show((location.hash || "").replace("#", "")); });
+
+    document.querySelectorAll(".copy").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var el = document.getElementById(btn.getAttribute("data-copy"));
+        var text = el.textContent;
+        function selectIt() {
+          var range = document.createRange(); range.selectNodeContents(el);
+          var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(range);
+        }
+        try {
+          navigator.clipboard.writeText(text).then(function () { btn.textContent = "Copied"; }, selectIt);
+        } catch (e) { selectIt(); }
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>

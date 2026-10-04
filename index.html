@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SiteMarkup Support</title>
+<meta name="description" content="Help and contact for SiteMarkup, the site photo, measurement and markup app for iPhone and iPad.">
+<link rel="icon" href="icon.png">
+<style>
+  /* Layout: one reading column: app header, contact card, then questions as plain sections. */
+  :root {
+    --bg: #f6f6f4; --paper: #ffffff; --ink: #17181a; --muted: #5d6066; --rule: #dcdcd8;
+    --accent: #1A4F92; --accent-ink: #ffffff;
+    --font-body: -apple-system, "SF Pro Text", "Helvetica Neue", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121315; --paper: #1b1c1f; --ink: #ecedee; --muted: #a2a5ab; --rule: #2e3034;
+      --accent: #6EA4E8; --accent-ink: #0b1a2e; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121315; --paper: #1b1c1f; --ink: #ecedee; --muted: #a2a5ab; --rule: #2e3034;
+    --accent: #6EA4E8; --accent-ink: #0b1a2e; color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.65;
+         padding-inline: 16px; padding-block: 0 48px; -webkit-text-size-adjust: 100%; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  header { padding-block: 40px 8px; display: flex; gap: 16px; align-items: center; }
+  header img { width: 72px; height: 72px; border-radius: 16px; }
+  h1 { font-size: clamp(28px, 6vw, 36px); line-height: 1.15; margin: 0; font-weight: 600; }
+  .sub { color: var(--muted); margin: 2px 0 0; }
+  .card { background: var(--paper); border: 1px solid var(--rule); border-radius: 14px; padding: clamp(18px, 4vw, 28px); margin-top: 24px; }
+  h2 { font-size: 20px; margin: 0 0 6px; font-weight: 600; }
+  h3 { font-size: 16px; margin: 24px 0 4px; font-weight: 600; }
+  p { margin: 0 0 8px; max-width: 65ch; }
+  a { color: var(--accent); }
+  .button { display: inline-block; background: var(--accent); color: var(--accent-ink); text-decoration: none;
+            font-weight: 600; padding: 12px 18px; border-radius: 999px; margin-top: 6px; }
+  footer { color: var(--muted); font-size: 13px; margin-top: 28px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="icon.png" alt="">
+    <div>
+      <h1>SiteMarkup Support</h1>
+      <p class="sub">Site photos, measurements and markups for your team, on iPhone and iPad.</p>
+    </div>
+  </header>
+
+  <section class="card">
+    <h2>Contact us</h2>
+    <p>Questions, problems or feedback: email us and we'll reply within two business days.</p>
+    <p><strong>Support email coming soon.</strong></p>
+  </section>
+
+  <section class="card">
+    <h2>Common questions</h2>
+
+    <h3>How does my team share projects?</h3>
+    <p>Choose your company's storage in Settings › Sync &amp; Storage: Dropbox, iCloud Drive, Google Drive or OneDrive, and a folder in it. Share that folder with your team in the storage service, and have everyone pick the same folder in the app.</p>
+
+    <h3>How do I add someone to our plan?</h3>
+    <p>The person who pays for the plan goes to Settings › Subscription › Invite Someone and enters their email. The app writes them an email with the steps. They sign in to SiteMarkup with that same email.</p>
+
+    <h3>I've been invited but the app says I'm not on the team.</h3>
+    <p>Sign in with the exact email you were invited with. If you use Sign in with Apple, choose "Share My Email", or sign in with Google instead. Then pick your company's shared folder in Settings › Sync &amp; Storage.</p>
+
+    <h3>How do I add more users?</h3>
+    <p>In Settings › Subscription, tap Add Users and move up to a bigger plan. Apple charges only the difference for the rest of the period.</p>
+
+    <h3>How does the free trial work, and how do I cancel?</h3>
+    <p>A new plan is free for 14 days. Cancel any time before it ends in your iPhone's Settings › your name › Subscriptions, or in the app at Settings › Subscription › Manage Subscription. Plans renew automatically unless cancelled at least 24 hours before the period ends.</p>
+
+    <h3>I got a new phone. How do I get my plan back?</h3>
+    <p>Sign in with the same Apple Account, then tap Restore Purchases in Settings › Subscription.</p>
+
+    <h3>Where are my projects kept? Can you see them?</h3>
+    <p>On your device and in your company's own storage folder. We don't run servers that receive them and can't see them. See the <a href="privacy.html#privacy">Privacy Policy</a>.</p>
+
+    <h3>How do I delete my data?</h3>
+    <p>Settings › Delete Account &amp; Data removes everything SiteMarkup keeps on the device and signs you out. Projects in your company's storage stay there for your company; delete them in the app or in the storage service.</p>
+
+    <h3>Which laser measurers work?</h3>
+    <p>Most Bluetooth laser measurers that pair in iOS Bluetooth settings stream their readings into the app. Pair it, then open SiteMarkup.</p>
+  </section>
+
+  <footer><a href="privacy.html#privacy">Privacy Policy</a> · <a href="privacy.html#terms">Terms of Use</a><br>SiteMarkup</footer>
+</div>
+</body>
+</html>
