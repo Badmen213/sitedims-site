@@ -1,3 +1,3 @@
-# SiteMarkup
+# SiteDims website
 
-Support and privacy pages for the SiteMarkup app: https://badmen213.github.io/sitemarkup-app/
+Support, privacy policy and terms for the SiteDims app. Published at https://sitedims.com from SiteMarkup/website (publish.sh).
