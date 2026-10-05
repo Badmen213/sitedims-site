@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Back to SiteDims</title>
+<style>
+  :root { --bg: #ffffff; --ink: #111418; --muted: #5b636d; --accent: #1f6feb; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0f1114; --ink: #f2f4f7; --muted: #9aa3ad; --accent: #6ea8ff; } }
+  body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    background: var(--bg); color: var(--ink); font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; text-align: center; padding: 16px; }
+  p { color: var(--muted); }
+  a { color: var(--accent); font-weight: 600; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Returning to SiteDims…</h1>
+  <p>If nothing happens, <a id="back" href="com.sitedims.app://xero">tap here to go back to the app</a>.</p>
+</main>
+<script>
+  // Xero only signs in to an https address, so it lands here; the sign-in result
+  // (a one-time code, useless without the app's own key) goes straight back to the app.
+  var target = "com.sitedims.app://xero" + window.location.search;
+  document.getElementById("back").href = target;
+  window.location.replace(target);
+</script>
+</body>
+</html>
